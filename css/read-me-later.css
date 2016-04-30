@@ -1,0 +1,24 @@
+/* Read Me Later */
+.rml_contents .rml_post_content {
+    float: left;
+    width: 65%;
+}
+.rml_contents .rml_img {
+    float: right;
+    height: 30%;
+    width: 30%;
+	margin-top: 30px;
+}
+.rml_contents .rml_posts {
+    overflow: hidden;
+	width:100%;
+	border-bottom: 1px solid #cccccc;
+    overflow: auto;
+    padding: 1% 0;
+}
+.rml_contents .rml_bttn {
+	display: none;
+}
+.rml_contents p {
+	line-height: 22px;
+}
