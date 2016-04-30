@@ -14,7 +14,7 @@ require(RML_DIR.'widgets.php');
 
 class ReadMeLater {
 	
-	/*
+    /**
      * Action hooks
      */
 	public function run() {
@@ -32,7 +32,7 @@ class ReadMeLater {
 		
 	} 
 	
-	/**
+    /**
      * Register plugin styles and scripts
      */
 	public function register_rml_scripts() {
@@ -40,7 +40,7 @@ class ReadMeLater {
 		wp_register_style( 'rml-style', plugin_dir_url( __FILE__ ) .'css/read-me-later.css' );
 	}
 	
-	/**
+    /**
      * Enqueues plugin-specific scripts.
      */
     public function rml_scripts() {        
@@ -48,19 +48,19 @@ class ReadMeLater {
 		wp_localize_script( 'rml-script', 'rml_obj', array( 'ajax_url' => admin_url('admin-ajax.php'), 'check_nonce' => wp_create_nonce('rml-nonce') ) );
     } 
 	
-	/**
+    /**
      * Enqueues plugin-specific styles.
      */
     public function rml_styles() {         
         wp_enqueue_style( 'rml-style' ); 
     } 
     
-	/**
-	 * Adds a read me later button at the bottom of each post excerpt that allows logged in users
-     * to save those posts in their read me later list.
-	 *
+        /**
+         * Adds a read me later button at the bottom of each post excerpt that allows logged in users
+         * to save those posts in their read me later list.
+         *
 	 * @param string $content
-	 * @returns string
+	 * @return string
 	 */
 	public function rml_button( $content ) {
 	
@@ -77,7 +77,7 @@ class ReadMeLater {
 	 * Hook into wp_ajax_ to save post ids, then display those posts using get_posts() function
 	 *
 	 * @access public
-	 * @return html
+	 * @return mixed
 	 */
 	public function read_me_later() {
 	
