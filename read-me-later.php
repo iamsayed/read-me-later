@@ -72,21 +72,6 @@ class ReadMeLater {
 		return $content;
 		
 	} 
-	
-	public function limit_words($string, $word_limit) {
-		// creates an array of words from $string (this will be our excerpt)
-		// explode divides the excerpt up by using a space character
-
-		$words = explode(' ', $string);
-
-		// this next bit chops the $words array and sticks it back together
-		// starting at the first word '0' and ending at the $word_limit
-		// the $word_limit which is passed in the function will be the number
-		// of words we want to use
-		// implode glues the chopped up array back together using a space character
-
-		return implode(' ', array_slice($words, 0, $word_limit));
-	}
 		
 	/**
 	 * Hook into wp_ajax_ to save post ids, then display those posts using get_posts() function
