@@ -20,8 +20,8 @@ class ReadMeLater {
 	public function run() {
 		
 		// Enqueue plugin styles and scripts
-        add_action( 'plugins_loaded', array( $this, 'rml_scripts' ) );
-        add_action( 'plugins_loaded', array( $this, 'rml_styles' ) );
+        	add_action( 'plugins_loaded', array( $this, 'rml_scripts' ) );
+        	add_action( 'plugins_loaded', array( $this, 'rml_styles' ) );
 		
 		// Setup filter hook to show Read Me Later link
 		add_filter( 'the_excerpt', array( $this, 'rml_button' ) );
