@@ -20,8 +20,8 @@ class ReadMeLater {
 	public function run() {
 		
 		// Enqueue plugin styles and scripts
-        add_action( 'plugins_loaded', array( $this, 'rml_scripts' ) );
-        add_action( 'plugins_loaded', array( $this, 'rml_styles' ) );
+        	add_action( 'plugins_loaded', array( $this, 'rml_scripts' ) );
+        	add_action( 'plugins_loaded', array( $this, 'rml_styles' ) );
 		
 		// Setup filter hook to show Read Me Later link
 		add_filter( 'the_excerpt', array( $this, 'rml_button' ) );
@@ -35,7 +35,7 @@ class ReadMeLater {
     /**
      * Register plugin styles and scripts
      */
-	public function register_rml_scripts() {
+		public function register_rml_scripts() {
 		wp_register_script( 'rml-script', plugins_url( 'js/read-me-later.js', __FILE__ ), array('jquery'), null, true );
 		wp_register_style( 'rml-style', plugin_dir_url( __FILE__ ) .'css/read-me-later.css' );
 	}
